@@ -5,52 +5,20 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".Pomodoro">
 
-    <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="00:00:00"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:id="@+id/mainTimerDisplay" android:textSize="30sp"
-            android:layout_marginTop="50dp" android:textAlignment="center"/>
-    <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="00:00:00"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:id="@+id/secondaryTimerDisplay" android:textSize="40sp"
-            android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/mainTimerDisplay" android:textAlignment="center"/>
-    <CheckBox
-            android:text="5 minute break"
-            android:layout_width="151dp"
-            android:layout_height="37dp"
-            tools:layout_editor_absoluteX="16dp" android:id="@+id/firstCheckBox"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/secondaryTimerDisplay" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/secondCheckBox"/>
-    <CheckBox
-            android:text="5 minute break"
-            android:layout_width="147dp"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="16dp" android:id="@+id/secondCheckBox" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/thirdCheckBox" android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/firstCheckBox"/>
-    <CheckBox
-            android:text="5 minute break"
-            android:layout_width="155dp"
-            android:layout_height="49dp"
-            tools:layout_editor_absoluteX="16dp" android:id="@+id/thirdCheckBox" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/fourthCheckBox" android:layout_marginTop="17dp"
-            app:layout_constraintTop_toBottomOf="@+id/secondCheckBox"/>
-    <CheckBox
-            android:text="30 minute break"
-            android:layout_width="164dp"
-            android:layout_height="44dp"
-            tools:layout_editor_absoluteX="16dp" android:id="@+id/fourthCheckBox" android:layout_marginTop="11dp"
-            app:layout_constraintTop_toBottomOf="@+id/thirdCheckBox"/>
 
+    <Spinner
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="8dp" android:id="@+id/spinner" android:dropDownWidth="match_parent"
+            android:spinnerMode="dropdown" android:entries="@array/work_time_array" android:layout_marginTop="200dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+            android:text="Start Working!"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/button" android:layout_marginTop="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/spinner" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
 </android.support.constraint.ConstraintLayout>
