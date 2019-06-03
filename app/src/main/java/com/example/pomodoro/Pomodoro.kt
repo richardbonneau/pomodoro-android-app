@@ -13,7 +13,10 @@ class Pomodoro : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pomodoro)
 
-        var workForHowMuchTime = 7200000L
+        val timerLength:Long = intent.getStringExtra("timerLength").substring(0,1).toLong()*3600000
+
+
+        var workForHowMuchTime = timerLength
         var currentStep = "firstStep"
         var stepToGoToAfterBreak = ""
         var howMuchTimeIsNextStep = 0L
@@ -21,7 +24,7 @@ class Pomodoro : AppCompatActivity() {
 
 
         fun moveToNextStep(): String {
-            println("in func "+ currentStep)
+            println("in func "+ currentStep + timerLength)
 
             when (currentStep) {
                 "firstStep" -> {
