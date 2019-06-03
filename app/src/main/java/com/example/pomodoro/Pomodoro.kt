@@ -24,7 +24,6 @@ class Pomodoro : AppCompatActivity() {
 
 
         fun moveToNextStep(): String {
-            println("in func "+ currentStep + timerLength)
 
             when (currentStep) {
                 "firstStep" -> {
