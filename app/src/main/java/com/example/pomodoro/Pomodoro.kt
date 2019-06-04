@@ -31,42 +31,42 @@ class Pomodoro : AppCompatActivity() {
                     msUntilNextStep = 5000
                     stepToGoToAfterBreak = "secondStep"
                     howMuchTimeIsNextStep = 25000
-                    firstCheckBox.isChecked = true
-                    debug.text = "fiveMinBreak"
+
+//                    debug.text = "fiveMinBreak"
                     return "fiveMinBreak"
                 }
                 "secondStep" -> {
                     msUntilNextStep = 5000L
                     stepToGoToAfterBreak = "thirdStep"
                     howMuchTimeIsNextStep = 25000
-                    secondCheckBox.isChecked = true
-                    debug.text = "fiveMinBreak"
+
+//                    debug.text = "fiveMinBreak"
                     return "fiveMinBreak"
                 }
                 "thirdStep" -> {
                     msUntilNextStep = 5000L
                     stepToGoToAfterBreak = "fourthStep"
                     howMuchTimeIsNextStep = 25000
-                    thirdCheckBox.isChecked = true
-                    debug.text = "fiveMinBreak"
+
+//                    debug.text = "fiveMinBreak"
                     return "fiveMinBreak"
                 }
                 "fourthStep"-> {
                     msUntilNextStep = 5000L
                     stepToGoToAfterBreak = "firstStep"
                     howMuchTimeIsNextStep = 25000
-                    fourthCheckBox.isChecked = true
-                    debug.text = "Thirty min Break"
+
+//                    debug.text = "Thirty min Break"
                     return "thirtyMinBreak"
                 }
                 "fiveMinBreak" -> {
                     msUntilNextStep = howMuchTimeIsNextStep
-                    debug.text = stepToGoToAfterBreak
+//                    debug.text = stepToGoToAfterBreak
                     return stepToGoToAfterBreak
                 }
                 "thirtyMinBreak" -> {
                     msUntilNextStep = howMuchTimeIsNextStep
-                    debug.text = stepToGoToAfterBreak
+//                    debug.text = stepToGoToAfterBreak
                     return stepToGoToAfterBreak
                 }
                 else ->return currentStep
@@ -100,15 +100,14 @@ class Pomodoro : AppCompatActivity() {
                 if (secondaryTimerSeconds.length !== 2) secondaryTimerSeconds = "0" + secondaryTimerSeconds
                 if (secondaryTimerMinutes.length !== 2) secondaryTimerMinutes = "0" + secondaryTimerMinutes
                 if (secondaryTimerHours.length !== 2) secondaryTimerHours = "0" + secondaryTimerHours
-                secondaryTimerDisplay.text =
-                    secondaryTimerHours + ":" + secondaryTimerMinutes + ":" + secondaryTimerSeconds
+                secondaryTimerDisplay.text = secondaryTimerHours + ":" + secondaryTimerMinutes + ":" + secondaryTimerSeconds
 
 
 
             }
 
             override fun onFinish() {
-                firstCheckBox.isChecked = true
+
                 println("finished")
             }
         }
