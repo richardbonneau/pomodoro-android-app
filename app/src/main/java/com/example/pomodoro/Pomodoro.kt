@@ -101,12 +101,12 @@ class Pomodoro : AppCompatActivity() {
         }
         mainTimer.start()
 
-        val newTextView = TextView(this)
-        newTextView.textSize = 20f
-        newTextView.text = "hello there"
-        
-
-        listOfTasks.addView(newTextView)
+//        val newTextView = TextView(this)
+//        newTextView.textSize = 20f
+//        newTextView.text = "hello there"
+//
+//
+//        listOfTasks.addView(newText
     }
 }
 
